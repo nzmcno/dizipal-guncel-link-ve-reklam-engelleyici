@@ -1,0 +1,31 @@
+# Genel olarak işletim sistemi tarafından oluşturulan dosyalar
+.DS_Store
+Thumbs.db
+
+# Node.js paketleri (eğer proje kullanıyorsa)
+node_modules/
+
+# Çıktı veya geçici dosyalar
+*.log
+*.tmp
+
+# VS Code kullanıcı ayarları
+.vscode/
+
+# Webpack, Parcel veya benzeri build araçlarının çıktıları
+dist/
+build/
+
+# Chrome uzantısı cache ve geçici dosyaları
+*.crx
+*.pem
+
+# Çevresel yapılandırmalar
+.env
+.env.local
+.env.*.local
+
+# Diğer kişisel veya otomatik oluşturulan dosyalar
+*.bak
+*.swp
+*.swo

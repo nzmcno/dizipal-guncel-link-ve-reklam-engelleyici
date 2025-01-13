@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Dizipal Güncel Link & Reklam Engelleyici",
+  "version": "0.1",
+  "description": "Dizipal Güncel Link & Reklam Engelleyici, Dizipal'in en güncel bağlantılarına erişim sağlar ve video reklamlarını otomatik olarak atlar. Dinamik domain desteği ve özelleştirilebilir ayarlarla kesintisiz bir izleme deneyimi sunar.",
+  "permissions": ["storage"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "32": "icons/icon-32.png",
+      "64": "icons/icon-64.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "32": "icons/icon-32.png",
+    "64": "icons/icon-64.png",
+    "128": "icons/icon-128.png"
+  }
+}
