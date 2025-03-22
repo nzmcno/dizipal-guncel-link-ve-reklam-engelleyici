@@ -53,7 +53,7 @@
       }
 
       if (tryCount < maxTries) {
-        setTimeout(skipAds, 2000);
+        setTimeout(skipAds, 900);
       }
     }
 
