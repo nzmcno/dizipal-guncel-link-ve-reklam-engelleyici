@@ -16,8 +16,8 @@
 
   // Ayarları yükle
   chrome.storage.local.get(["maxTries", "adBlockDuration", "adBlockEnabled"], (settings) => {
-    const maxTries = settings.maxTries ?? 4; // Varsayılan 4
-    const maxDuration = (settings.adBlockDuration ?? 1) * 60000; // Varsayılan 1 dakika
+    const maxTries = settings.maxTries ?? 6; // Varsayılan 6
+    const maxDuration = (settings.adBlockDuration ?? 2) * 60000; // Varsayılan 2 dakika
     const isAdBlockEnabled = settings.adBlockEnabled ?? true; // Varsayılan açık
     const startTime = Date.now();
 
@@ -53,7 +53,7 @@
       }
 
       if (tryCount < maxTries) {
-        setTimeout(skipAds, 900);
+        setTimeout(skipAds, 100);
       }
     }
 

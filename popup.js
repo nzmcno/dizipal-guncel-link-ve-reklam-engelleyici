@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Reklam engelleyici durumunu ve ayarları yükle
   chrome.storage.local.get(["adBlockEnabled", "adBlockDuration", "maxTries"], (result) => {
     const isEnabled = result.adBlockEnabled ?? true; // Varsayılan açık
-    const duration = result.adBlockDuration ?? 1; // Varsayılan süre: 1 dakika
-    const maxTries = result.maxTries ?? 4; // Varsayılan deneme sayısı: 4
+    const duration = result.adBlockDuration ?? 2; // Varsayılan süre: 2 dakika
+    const maxTries = result.maxTries ?? 6; // Varsayılan deneme sayısı: 6
     updateAdBlockButton(isEnabled);
     adBlockDurationInput.value = duration;
     maxTriesInput.value = maxTries;
