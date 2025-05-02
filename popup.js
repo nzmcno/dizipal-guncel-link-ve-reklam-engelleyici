@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // API URL ve sabit URL
   const apiUrl = "https://raw.githubusercontent.com/dizipaltv/api/main/dizipal.json";
-  const fixedUrl = "https://dizipa845.com";
+  const fixedUrl = "https://dizipal952.com";
 
   // Reklam engelleyici durumunu ve ayarları yükle
   chrome.storage.local.get(["adBlockEnabled", "adBlockDuration", "maxTries"], (result) => {
