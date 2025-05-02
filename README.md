@@ -15,6 +15,22 @@ A Chrome extension that provides quick access to the latest Dizipal links and au
 
 ---
 
+## 💖 Projeyi Destekleyin
+Eğer bu projeyi faydalı buluyorsanız, geliştirilmesine destek olmayı düşünebilirsiniz:
+
+<p align="center">
+  <a href="https://www.buymeacoffee.com/nzmcno" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+</p>
+
+<p align="center">
+  <strong>Cryptocurrency Donations:</strong><br>
+  Bitcoin (BTC): <code>bc1qj629vmsvm0jv2jej582u95wftnxyfdqe6almfg</code><br>
+  Ethereum (ETH): <code>0x6B675217f30BdBF5aB56b0f8fb696C28a0c74311</code><br>
+  Solana (SOL): <code>FsqY73gKLpadjKiiBQYodPCEL66R9vxZUBiNKpMc3RtA</code>
+</p>
+
+---
+
 ## ✨ **Özellikler / Features**
 
 ✅ **Reklam Engelleme / Ad Blocker**
