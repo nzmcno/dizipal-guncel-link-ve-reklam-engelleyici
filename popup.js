@@ -1,14 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
   const toggleAdBlockButton = document.getElementById("toggleAdBlock");
-  const openDizipalButton = document.getElementById("openDizipal");
+  const openDizipal1Button = document.getElementById("openDizipal1");
+  const openDizipal2Button = document.getElementById("openDizipal2");
+  const openDizipal3Button = document.getElementById("openDizipal3");
+  const openDizipal4Button = document.getElementById("openDizipal4");
+  const openDizipal5Button = document.getElementById("openDizipal5");
   const adBlockDurationInput = document.getElementById("adBlockDuration");
   const maxTriesInput = document.getElementById("maxTries");
   const saveDurationButton = document.getElementById("saveDuration");
   const saveMaxTriesButton = document.getElementById("saveMaxTries");
 
-  // API URL ve sabit URL
-  const apiUrl = "https://raw.githubusercontent.com/dizipaltv/api/main/dizipal.json";
-  const fixedUrl = "https://dizipal952.com";
+  // API URL'leri ve sabit URL
+  const apiUrl1 = "https://raw.githubusercontent.com/dizipaltv/api/main/dizipal.json";
+  const apiUrl3 = "https://raw.githubusercontent.com/nzmcno/dizipal-guncel-link-ve-reklam-engelleyici/refs/heads/main/links/dizipal3.json";
+  const apiUrl4 = "https://raw.githubusercontent.com/nzmcno/dizipal-guncel-link-ve-reklam-engelleyici/refs/heads/main/links/dizipal4.json";
+  const apiUrl5 = "https://raw.githubusercontent.com/nzmcno/dizipal-guncel-link-ve-reklam-engelleyici/refs/heads/main/links/dizipal5.json";
+  const fixedUrl = "https://dizipal1225.com";
 
   // Reklam engelleyici durumunu ve ayarları yükle
   chrome.storage.local.get(["adBlockEnabled", "adBlockDuration", "maxTries"], (result) => {
@@ -30,20 +37,37 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // "Dizipal’i Aç" butonuna tıklama işlevi
-  openDizipalButton.addEventListener("click", async () => {
+  // API'den URL çeken fonksiyon (parametre olarak API URL alır)
+  async function openDizipalFromAPI(apiUrl) {
     try {
       const response = await fetch(apiUrl);
       if (!response.ok) throw new Error("API request failed");
       const data = await response.json();
-      const currentSiteURL = data.currentSiteURL || fixedUrl; // Sabit URL kullanımı
+      const currentSiteURL = data.currentSiteURL || fixedUrl;
       chrome.tabs.create({ url: currentSiteURL });
     } catch (error) {
       console.error("API hatası:", error);
       alert("Site URL alınırken bir hata oluştu! Sabit URL'ye yönlendiriliyor.");
-      chrome.tabs.create({ url: fixedUrl }); // API hatasında sabit URL'ye yönlendir
+      chrome.tabs.create({ url: fixedUrl });
     }
+  }
+
+  // Dizipal 1 - API'den URL çek
+  openDizipal1Button.addEventListener("click", () => openDizipalFromAPI(apiUrl1));
+
+  // Dizipal 2 - Direkt link
+  openDizipal2Button.addEventListener("click", () => {
+    chrome.tabs.create({ url: "https://t.ly/dizipalguncel" });
   });
+
+  // Dizipal 3 - API'den URL çek
+  openDizipal3Button.addEventListener("click", () => openDizipalFromAPI(apiUrl3));
+
+  // Dizipal 4 - API'den URL çek
+  openDizipal4Button.addEventListener("click", () => openDizipalFromAPI(apiUrl4));
+
+  // Dizipal 5 - API'den URL çek
+  openDizipal5Button.addEventListener("click", () => openDizipalFromAPI(apiUrl5));
 
   // Süre ayarını kaydetme işlevi
   saveDurationButton.addEventListener("click", () => {
