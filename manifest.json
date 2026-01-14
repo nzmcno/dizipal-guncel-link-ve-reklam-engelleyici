@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Dizipal Güncel Link & Reklam Engelleyici",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Dizipal'in en güncel bağlantılarına erişin ve video reklamlarını otomatik olarak atlayın.",
   "permissions": ["storage"],
   "host_permissions": ["<all_urls>"],
