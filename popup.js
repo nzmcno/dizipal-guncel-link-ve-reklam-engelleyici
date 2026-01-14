@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const openDizipal3Button = document.getElementById("openDizipal3");
   const openDizipal4Button = document.getElementById("openDizipal4");
   const openDizipal5Button = document.getElementById("openDizipal5");
+  const openDizipal6Button = document.getElementById("openDizipal6");
   const adBlockDurationInput = document.getElementById("adBlockDuration");
   const maxTriesInput = document.getElementById("maxTries");
   const saveDurationButton = document.getElementById("saveDuration");
@@ -12,9 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // API URL'leri ve sabit URL
   const apiUrl1 = "https://raw.githubusercontent.com/dizipaltv/api/main/dizipal.json";
-  const apiUrl3 = "https://raw.githubusercontent.com/nzmcno/dizipal-guncel-link-ve-reklam-engelleyici/refs/heads/main/links/dizipal3.json";
-  const apiUrl4 = "https://raw.githubusercontent.com/nzmcno/dizipal-guncel-link-ve-reklam-engelleyici/refs/heads/main/links/dizipal4.json";
   const apiUrl5 = "https://raw.githubusercontent.com/nzmcno/dizipal-guncel-link-ve-reklam-engelleyici/refs/heads/main/links/dizipal5.json";
+  const apiUrl6 = "https://raw.githubusercontent.com/nzmcno/dizipal-guncel-link-ve-reklam-engelleyici/refs/heads/main/links/dizipal6.json";
+  const apiUrl7 = "https://raw.githubusercontent.com/nzmcno/dizipal-guncel-link-ve-reklam-engelleyici/refs/heads/main/links/dizipal7.json";
   const fixedUrl = "https://dizipal1225.com";
 
   // Reklam engelleyici durumunu ve ayarları yükle
@@ -60,14 +61,21 @@ document.addEventListener("DOMContentLoaded", () => {
     chrome.tabs.create({ url: "https://t.ly/dizipalguncel" });
   });
 
-  // Dizipal 3 - API'den URL çek
-  openDizipal3Button.addEventListener("click", () => openDizipalFromAPI(apiUrl3));
+  // Dizipal 3 - Direkt link
+  openDizipal3Button.addEventListener("click", () => {
+    chrome.tabs.create({ url: "https://t.ly/dizipalgiris" });
+  });
 
-  // Dizipal 4 - API'den URL çek
-  openDizipal4Button.addEventListener("click", () => openDizipalFromAPI(apiUrl4));
+  // Dizipal 4 - Will add soon
 
   // Dizipal 5 - API'den URL çek
-  openDizipal5Button.addEventListener("click", () => openDizipalFromAPI(apiUrl5));
+  openDizipal4Button.addEventListener("click", () => openDizipalFromAPI(apiUrl5));
+
+  // Dizipal 6 - API'den URL çek
+  openDizipal5Button.addEventListener("click", () => openDizipalFromAPI(apiUrl6));
+
+  // Dizipal 7 - API'den URL çek
+  openDizipal6Button.addEventListener("click", () => openDizipalFromAPI(apiUrl7));
 
   // Süre ayarını kaydetme işlevi
   saveDurationButton.addEventListener("click", () => {
